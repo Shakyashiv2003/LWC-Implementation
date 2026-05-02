@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="utility:formula">
+        <div class="slds-var-m-horizontal_medium"> 
+            <lightning-input label="Number 1" type="number" variant="label-inline" onchange={handleChange} data-id="num1"></lightning-input>
+            <lightning-input label="Number 2" type="number" variant="label-inline" onchange={handleChange} data-id="num2"></lightning-input>
+        </div>
+    
+
+    <lightning-button-group slot="actions">
+    <lightning-button data-action="add" label="Add" onclick={calculate}></lightning-button>
+    <lightning-button data-action="sub" label="Subtract" onclick={calculate}></lightning-button>
+    <lightning-button data-action="mul" label="Multiply" onclick={calculate}></lightning-button>
+    <lightning-button data-action="div" label="Divide" onclick={calculate}></lightning-button>
+    </lightning-button-group>
+    
+    <div class="slds-var-m-left_medium">
+        <p class="slds-text-heading_medium"> Result: <strong>{result}</strong></p>
+    </div>
+    
+
+    </lightning-card>
+    
+</template>

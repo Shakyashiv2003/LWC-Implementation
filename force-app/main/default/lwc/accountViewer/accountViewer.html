@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Account Viewer" icon-name="standard:account">
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="acc">
+                <div key={acc.Id} class="account-row slds-var-m-horizontal_medium" > 
+                    <span class="name"> {acc.Name} </span> 
+                    <span class="industry">{acc.Industry}</span>
+                </div> 
+            </template>
+        </template> 
+        
+
+        <template if:true={error}>
+            <div> Data Loading Error</div>
+        </template>
+    </lightning-card>
+    
+</template>

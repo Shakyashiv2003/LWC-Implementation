@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Character Counter using LWC"> 
+        <lightning-input 
+            label="Type something" 
+            maxlength="50"
+            onchange={handleChange}
+            class="slds-m-horizontal_medium">
+        </lightning-input>
+
+    <div class="slds-m-horizontal_medium" >
+        <p>{count}/50</p>
+    </div>
+    
+
+    <lightning-button 
+        class="slds-m-horizontal_medium slds-m-align_right"
+        slot="actions"
+        label="Submit" 
+        disabled={isDisabled}
+        variant="brand">
+    </lightning-button>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  title="To DO List using LWC" icon-name="utility:task">
+        <lightning-input label="Task" type="text" variant="inline-label" onchange={handleChange} value={inputValue}></lightning-input>
+        <lightning-button label="Add Task" slot="actions" variant="brand" onclick={handleTaskAdd}></lightning-button>
+    
+        <template if:true={taskList.length}> 
+            <template for:each={taskList} for:item="task" >
+                <div key={task} class="task-row" >
+                <span> {task} </span>
+                
+                <lightning-button label="Delete Task" variant="destructive" onclick={handleDeleteTask} data-action={task}>  </lightning-button>
+                 
+            </div>
+            </template>
+        </template>
+        
+        <template if:false={taskList.length}>
+        <p> No Tasks Yet</p>
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template >
+    <lightning-card title="Greeting Card Using LWC">
+        <lightning-input class="slds-var-m-horizontal_medium" label="Enter your Name" placeholder="enter you name here" onchange={handleChange} value={name}> </lightning-input>
+        <div class="slds-var-m-around_medium slds-text-align_right">
+        <lightning-button  label="Show greetings" variant="brand" onclick={clickme} disabled={isDisabled}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <template if:true={message}>
+        <p>{message}</p>
+    </template>
+</template>

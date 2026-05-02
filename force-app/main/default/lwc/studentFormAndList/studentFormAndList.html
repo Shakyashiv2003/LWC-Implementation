@@ -1,0 +1,22 @@
+<template>
+<lightning-card> 
+
+<lightning-input label="Student Name" onchange={nameChange} value={name}></lightning-input>
+<lightning-button slot="actions" label="Add Student Name" onclick={addStudent}></lightning-button>
+
+<template if:true={students.length}> 
+    <template for:each={students} for:item="stu">
+        <div key={stu}>
+            {stu}
+            <!-- <span>{stu}</span> -->
+                <lightning-button label="Delete" variant="destructive" data-stu={stu} onclick={deleteStudent}> </lightning-button>
+        </div>
+    </template>
+</template> 
+
+    <template if:false={students.length}>
+        <p> No students Yet 😔</p>
+    </template>
+
+</lightning-card>
+</template>
