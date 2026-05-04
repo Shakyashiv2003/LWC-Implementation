@@ -1,13 +1,29 @@
 <template>
     <lightning-card title="Account Viewer" icon-name="standard:account">
+
         <template if:true={accounts}>
+
             <template for:each={accounts} for:item="acc">
-                <div key={acc.Id} class="account-row slds-var-m-horizontal_medium" > 
-                    <span class="name"> {acc.Name} </span> 
-                    <span class="industry">{acc.Industry}</span>
-                </div> 
-            </template>
+    
+    <div key={acc.Id} class="account-card">
+
+        <!-- Account Header -->
+        <div class="account-header">
+            <span class="name">{acc.Name}</span>
+            <span class="industry">{acc.Industry}</span>
+        </div>
+
+        <!-- Contacts -->
+        <c-contact-viewer account-id={acc.Id}></c-contact-viewer>
+
+    </div>
+
+</template>
+
         </template> 
+
+
+    
         
         
 

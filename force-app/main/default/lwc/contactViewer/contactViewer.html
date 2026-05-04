@@ -1,3 +1,13 @@
 <template>
-    
+    <template if:true={contacts}>
+        <template for:each={contacts} for:item="con">
+            <div key={con.Id} class="contact-row">
+                {con.Name} - {con.Email}
+            </div>
+        </template>
+    </template>
+
+    <template if:true={error}>
+        <p>Error loading contacts</p>
+    </template>
 </template>

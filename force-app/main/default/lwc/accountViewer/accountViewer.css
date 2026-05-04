@@ -1,15 +1,23 @@
-.account-row {
+.account-card {
+    background: #f4f6f9;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.account-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .name {
-    font-weight: bold;
+    font-size: 15px;
 }
 
 .industry {
-    color: gray;
+    color: #666;
+    font-size: 13px;
 }
+

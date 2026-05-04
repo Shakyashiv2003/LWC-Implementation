@@ -1,0 +1,11 @@
+.contact-row {
+    padding: 5px 0 5px 12px;
+    margin-left: 8px;
+    border-left: 2px solid #d8dde6;
+    font-size: 13px;
+    color: #444;
+}
+
+.contact-row:hover {
+    background-color: #f9f9f9;
+}
