@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Product List">
+
+        <template for:each={products} for:item="item">
+            
+            <c-product-item 
+                key={item.id}
+                product={item}
+                onaddtocart={handleAddToCart}>
+            </c-product-item>
+        
+        </template>
+
+        <div class="cart">
+            <p><strong>Total Items:</strong> {cart.length}</p>
+            <p><strong>Total Price:</strong> ₹{totalPrice}</p>
+        </div>
+
+    </lightning-card>
+</template>

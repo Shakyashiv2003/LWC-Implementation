@@ -1,0 +1,10 @@
+<template>
+    <div class="container">
+        <lightning-input label="Enter step"  value={stepValue} onchange={handleInput}></lightning-input>
+
+        <div class="button-group">
+            <lightning-button label="Increase" onclick={handleIncrease}></lightning-button>
+            <lightning-button label="Decrease" onclick={handleDecrease}></lightning-button>
+        </div>
+    </div>
+</template>

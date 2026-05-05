@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    gap: 10px; /* space between input and buttons */
+}
+
+.button-group {
+    display: flex;
+    gap: 8px; /* space between buttons */
+}
