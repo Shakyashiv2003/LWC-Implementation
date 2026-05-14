@@ -1,20 +1,37 @@
 <template>
-    <lightning-card title="Product List">
 
-        <template for:each={products} for:item="item">
-            
-            <c-product-item 
-                key={item.id}
-                product={item}
-                onaddtocart={handleAddToCart}>
-            </c-product-item>
-        
+    <!-- 🔹 Product List -->
+    <h2 class="slds-text-heading_medium slds-m-around_small">  🛍 Product List   </h2>
+
+    <template for:each={products} for:item='prod'>
+        <c-product-item 
+            key={prod.id}
+            product={prod} 
+            onaddtocart={handleAddToCart}>
+        </c-product-item>
+    </template>
+
+    <!-- 🔹 Divider -->
+    <hr class="slds-m-vertical_medium"/>
+
+    <!-- 🔹 Cart Section -->
+    <h2 class="slds-text-heading_medium slds-m-around_small">  🛒 Cart </h2>
+
+    <template if:true={cart.length}>
+        <template for:each={cart} for:item="item">
+            <p key={item.id} class="slds-m-left_medium">
+                {item.name} - ₹{item.price}
+            </p>
         </template>
 
-        <div class="cart">
-            <p><strong>Total Items:</strong> {cart.length}</p>
-            <p><strong>Total Price:</strong> ₹{totalPrice}</p>
-        </div>
+        <h3 class="slds-m-around_medium">
+            Total: ₹{totalPrice}
+        </h3>
 
-    </lightning-card>
+    </template>
+
+    <template if:false={cart.length}>
+        <p class="slds-m-left_medium">Cart is empty</p>
+    </template>
+
 </template>

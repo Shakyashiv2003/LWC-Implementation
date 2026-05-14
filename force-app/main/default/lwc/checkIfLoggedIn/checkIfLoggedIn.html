@@ -1,0 +1,22 @@
+<template>
+    <lightning-input label="Enter Name" value={name} onchange={handleChange}></lightning-input>
+    <!-- <lightning-button label="login/Logout" onclick={clickmeToLogin} disabled={isDisabled}></lightning-button> -->
+   
+    <lightning-button-group>
+        <lightning-button label="Login" onclick={handleLogin} disabled={isDisabled}></lightning-button>
+        <lightning-button label="Logout" onclick={handleLogout} disabled={isDisabled}></lightning-button>
+    </lightning-button-group>
+
+
+
+
+    <template if:true={isLoggedIn}>
+        <p style="color: Green;">{message}</p>
+    </template>
+    
+    <template if:false={isLoggedIn}>
+        <p style="color: red;">{message}</p>
+    </template>
+
+    
+</template>

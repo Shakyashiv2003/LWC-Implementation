@@ -1,0 +1,9 @@
+<template>
+    <span> {task.name} 
+        <template if:true={task.completed}> (Done) </template>
+    </span> 
+
+    <lightning-button label="Add Task" onclick={handleCompleteTask}> </lightning-button>
+    <lightning-button label="Delete Task" onclick={handleDeleteTask}> </lightning-button>
+    
+</template>

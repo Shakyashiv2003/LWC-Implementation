@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="LWC based Task Dashboard">
+
+        <template for:each={tasks} for:item="task">
+            <c-task-item key={task.id} task={task} oncomplete={handleOnCompleted} ondelete={handleOnDeleted}> </c-task-item>
+        </template>
+
+
+        <div> 
+            <p> Total Tasks: {tasks.length}</p>
+            <p> Task Completed : {completedCount} </p>
+        </div>
+
+    </lightning-card>
+</template>
